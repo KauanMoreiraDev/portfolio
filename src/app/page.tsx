@@ -31,7 +31,7 @@ export default function Home() {
         <h2 className="p-2 font-Oswald font-Regular text-lg">Front-End Development Student</h2>
         <h2 className="p-2 font-Oswald font-medium">HTML | CSS | JS | Next.js | TailwindCSS</h2>
         <h3 className="p-2 font-Oswald font-Regular text-lg">Entre em contato</h3>
-        <div className="pt-4 flex flex-row justify-center  relative">
+        <div className="pt-4 flex flex-row justify-center">
           {contato.map((cttfn, index) => (
             <Link key={index} href={cttfn.link} target="_blank">
               <Image className="p-1 m-1" src={cttfn.image} alt="" width={50} height={50} /></Link>
