@@ -3,22 +3,26 @@ import Image from "next/image";
 import Link from "next/link";
 
 const contato = [{
-  link: "linkedin",
+  nome: "Linkein",
+  link: "https://www.linkedin.com/in/kauan-moreira-a5449426a/",
   image: "/images/linkedin.png",
   imageHover: "/images/linkedinRoxo.png",
 },
 {
+  nome: "Git Hub",
   link: "https://github.com/KauanMoreiraDev",
   image: "/images/github.png",
   imageHover: "/images/githubRoxo.png",
 },
 {
+  nome: "Instagram",
   link: "https://instagram.com/kauannmoreira_",
   image: "/images/instagram.png",
   imageHover: "/images/instagramRoxo.png",
 },
 {
-  link: "kauanmoreira457@gmail.com",
+  nome: "Email",
+  link: "https://mail.google.com/mail/u/0/?fs=1&to=kauanmoreira457@gmail.com&tf=cm",
   image: "/images/o-email.png",
   imageHover: "/images/o-emailRoxo.png",
 }]
