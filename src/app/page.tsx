@@ -30,10 +30,7 @@ const contato = [{
 
 export default function Home() {
   return (
-    <main className="bg-gradient-to-br from-primary via-secoundary to-pink-600 h-screen e w-screen flex flex-row-reverse items-center justify-center">
-      <div className="w-1/3 h-3/5">
-        <div className="bg-gray-200 flex justify-start w-12 h-10 -ml-1 rounded-r-lg hover:w-32 group">Puxe <span className="hidden group-hover:block ml-1 transition duration-1000"><Link href={curriculo} target="_blank">Currículo</Link></span></div>
-      </div>
+    <main className="bg-gradient-to-br from-primary via-secoundary to-pink-600 h-screen e w-screen flex items-center justify-center">
       <div className="m-1 p-2 z-10 bg-lime-500 rounded-xl text-center flex flex-col flex-nowrap justify-evenly shadow-2xl w-1/3 h-2/3 max-sm:w-3/5 max-md:w-1/3 max-lg:w-1/3">
         <h1 className="font-Oswald text-3xl">Olá, eu sou o <span className="italic font-semibold">Kauan!</span></h1>
         <h2 className="p-2 font-Oswald font-Regular text-lg">Front-End Development Student</h2>
@@ -45,6 +42,9 @@ export default function Home() {
               <Image className="p-1 m-1" src={cttfn.image} alt="" width={50} height={50} /></Link>
           ))}
         </div>
+      </div>
+      <div className="h-1/2">
+        <div className="bg-gray-200 flex font-Oswald text-lg w-12 h-10 -ml-1 rounded-r-lg group">Puxe <span className="hidden group-hover:block ml-1 transition duration-1000 bg-gray-200 rounded-r-lg"><Link href={curriculo} target="_blank" className=" font-Oswald font-semibold text-lg hover:underline hover:text-primary pr-2">Currículo</Link></span></div>
       </div>
     </main>
   );
