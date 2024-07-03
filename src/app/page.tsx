@@ -31,7 +31,7 @@ const contato = [{
 export default function Home() {
   return (
     <main className="bg-gradient-to-br from-primary via-secoundary to-pink-600 h-screen e w-screen flex flex-row-reverse items-center justify-center">
-      <div className="w-1/3 h-3/5">
+      <div className="w-1/6 h-3/5">
         <div className="bg-gray-200 flex justify-start w-12 h-10 -ml-1 rounded-r-lg hover:w-32 group">Puxe <span className="hidden group-hover:block ml-1 transition duration-1000"><Link href={curriculo} target="_blank">Currículo</Link></span></div>
       </div>
       <div className="m-1 p-2 z-10 bg-lime-500 border-black border-x border-y rounded-xl text-center flex flex-col flex-nowrap justify-evenly shadow-2xl w-1/3 h-2/3 max-sm:w-3/5 max-md:w-1/3 max-lg:w-1/3">
