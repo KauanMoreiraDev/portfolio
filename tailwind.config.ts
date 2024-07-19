@@ -9,9 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'primary': '#5400A3',
-        'secoundary': '#872080',
-        'terceary': '#a800a8,'
+        'primary': '#A21CAF',
+        'secoundary': '#840090',
       },
 
       fontFamily: {
