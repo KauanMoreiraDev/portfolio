@@ -4,11 +4,9 @@ interface ButtonProps {
     onClick: () => void;
     label: string;
     bgColor: string;
-    // bgColorHover?: string;
     textColor: string;
-    textColorHover?: string
     disabled?: boolean;
-};
+}
 
 const ButtonG = ({ onClick, label, bgColor, textColor, disabled }: ButtonProps)=> {
   return (
