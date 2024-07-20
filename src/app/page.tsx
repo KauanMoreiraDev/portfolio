@@ -2,8 +2,8 @@
 
 import RedesSociais from "./components/redesSociais/page";
 import Image from "next/image";
-import ButtonG from "./components/buttonG/page";
-import TitleG from "./components/titleG/page";
+import ButtonG from "./components/button/button";
+import TitleG from "./components/title/title";
 
 
 export default function Home() {
