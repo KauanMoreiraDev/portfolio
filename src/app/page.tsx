@@ -31,7 +31,7 @@ export default function Home() {
 
                   Confie seu projeto a um profissional e veja a mágica acontecer! </div>
                 
-                <ButtonG onClick={handleClick} label="clique aqui para teste" bgColor="bg-primary" textColor="text-red-500" />
+                <ButtonG onClick={handleClick} label="clique aqui para teste" bgColor="bg-primary" />
                 
               </div>
             </div>
