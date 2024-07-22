@@ -5,7 +5,8 @@ import RedesSociais from "./components/redesSociais/redesSociais";
 import Button from "./components/button/button";
 import Title from "./components/title/title";
 import SubTitle from "./components/subTitle/subTitle";
-import { DownloadIcon, PaperPlaneIcon } from "@radix-ui/react-icons";
+import { DownloadIcon, PaperPlaneIcon, ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
+import RoleBaixo from "./components/roleBaixo/roleBaixo"
 
 export default function Home() {
   
@@ -140,7 +141,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-            <div className="m-3">ico role para baixo ico</div>
+            <RoleBaixo/>
         </div>
 
         <div className="serviços mx-auto max-w-screen-lg m-10">
@@ -172,7 +173,7 @@ export default function Home() {
         <div className="portfolio mx-auto max-w-screen-lg m-3">
           <div className="w-full h-full">
             <div className="flex flex-row">
-              <div className="bg-white w-3/4 h-64 rounded-l-3xl">
+              <div className="bg-black w-3/4 h-64 rounded-l-3xl">
                 imagem/video
               </div>
               <div className="bg-slate-600 w-1/4 p-2 rounded-r-3xl">
@@ -184,8 +185,8 @@ export default function Home() {
             </div>
           </div>
           <div className="buttons prev e next flex flex-row justify-center">
-            <div className="bg-lime-500 border border-white w-8 h-4" />
-            <div className="bg-lime-500 border border-white w-8 h-4" />
+            <div className="m-2 p-1"><ChevronLeftIcon/></div>
+            <div className="m-2 p-1"><ChevronRightIcon/></div>
           </div>
         </div>
 
