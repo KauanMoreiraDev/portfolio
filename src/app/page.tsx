@@ -80,8 +80,8 @@ export default function Home() {
     <main className="bg-slate-950 font-Oswald font-light text-white">
       <div className="w-screen-lg h-full">
         <div className="inicio mx-auto max-w-screen-lg py-10">
-          <div className="flex items-center content-center">
-            <div className="bg-slate-500 w-1/12 h-full rounded-3xl">
+          <div className="flex flex-col items-center content-center sm:flex-row">
+            <div className="bg-slate-500 w-5/12 sm:w-1/12 h-full rounded-3xl">
               <RedesSociais />
             </div>
             <div className="bg-blue-950 w-4/6 h-full rounded-3xl">
@@ -115,7 +115,8 @@ export default function Home() {
                   onClick={handleClick}
                   label="Baixar CV"
                   icon={<DownloadIcon/>}
-                  wSize="w-2/12"
+                  wSize="w-full"
+                  sm="sm:w-2/12"
                   bgColor="bg-primary"
                   textColor="text-white"
                 />
@@ -123,7 +124,8 @@ export default function Home() {
                   onClick={handleClick}
                   label="Contato"
                   icon={<PaperPlaneIcon/>}
-                  wSize="w-2/12"
+                  wSize="w-full"
+                  sm="sm:w-2/12"
                   bgColor="bg-primary"
                   textColor="text-white"
                 />
@@ -155,7 +157,7 @@ export default function Home() {
           </div>
           
             <div className="mx-auto max-w-screen-md">
-              <div className="grid grid-cols-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3">
                 {serviços.map((srvfn, index) => (
                   <div
                     key={index}
@@ -172,11 +174,11 @@ export default function Home() {
         </div>
         <div className="portfolio mx-auto max-w-screen-lg m-3">
           <div className="w-full h-full">
-            <div className="flex flex-row">
-              <div className="bg-black w-3/4 h-64 rounded-l-3xl">
+            <div className="flex flex-col items-center sm:flex-row">
+              <div className="bg-black w-11/12 sm:w-3/4 h-64 rounded-t-3xl sm:rounded-l-3xl">
                 imagem/video
               </div>
-              <div className="bg-slate-600 w-1/4 p-2 rounded-r-3xl">
+              <div className="bg-slate-600 w-11/12 sm:w-1/4 p-2 rounded-b-3xl sm:rounded-r-3xl">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Accusamus deserunt consequuntur ratione iure consectetur
                 praesentium unde illum voluptas explicabo aliquid nam aut, magni
@@ -191,8 +193,8 @@ export default function Home() {
         </div>
 
         <div className="habilidades mx-auto max-w-screen-lg">
-          <div className="h-32 flex items-center flex-col">
-            <div className="flex flex-row h-5/6 ">
+          <div className="sm:h-32 flex items-center flex-col">
+            <div className="flex flex-col h-5/6 sm:flex-row ">
             {habilidades.map((habfn, index) => (
                 <div key={index} className={`flex ${habfn.positionIsEnd ? 'items-end' : 'items-start' }`}>
                   <div className="border border-transparent w-24">
@@ -207,11 +209,11 @@ export default function Home() {
 
         <div className="Contato mx-auto mt-7 max-w-screen-lg">
           <div className="bg-slate-800 rounded-3xl">
-            <div className="flex flex-row justify-center">
+            <div className="flex flex-col sm:flex-row items-center sm:justify-center w-full">
               <div className="m-1 p-2 w-1/2">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel eius dolorum nulla laudantium fugiat magnam hic tempora saepe aspernatur incidunt totam libero quia aut minima, impedit sint exercitationem fugit.
               </div>
-              <div className="w-1/12 h-full">
+              <div className="sm:w-1/12 sm:h-full">
                 <RedesSociais />
               </div>
             </div>
