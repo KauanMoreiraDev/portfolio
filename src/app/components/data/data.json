@@ -1,23 +1,82 @@
 {
-    "Home" : [
-    {
-        "pictire": "/images/kauan00.png",
-        "title": "Olá, eu sou Kauan!",
-        "subTitle": "Front-end Develoaper",
-        "text1": "De Leme, São Paulo, Kauan é um especialista em front-end dedicado à criação de web sites excepcionais com Next.js! 🚀💻",
-        "text2": "Combinando habilidade e criatividade, ele transforma ideias em realidades digitais impressionantes. Utilizando o poderoso framework Next.js, Kauan cria sites rápidos, dinâmicos e totalmente otimizados. Quer um site que se destaque? Ele é a escolha certa!",
-        "text3": "Confie seu projeto a um profissional e veja a mágica acontecer!"
-    }
-],
-        "buttons" : [
+    "Home": [
         {
-                "text": "Baixar CV",
-                "icon": "DownloadIcon"
-            },
+            "pictire": "/images/kauan00.png",
+            "title": "Olá, eu sou Kauan!",
+            "subTitle": "Front-end Develoaper",
+            "text1": "De Leme, São Paulo, Kauan é um especialista em front-end dedicado à criação de web sites excepcionais com Next.js! 🚀💻",
+            "text2": "Combinando habilidade e criatividade, ele transforma ideias em realidades digitais impressionantes. Utilizando o poderoso framework Next.js, Kauan cria sites rápidos, dinâmicos e totalmente otimizados. Quer um site que se destaque? Ele é a escolha certa!",
+            "text3": "Confie seu projeto a um profissional e veja a mágica acontecer!"
+        }
+    ],
+    "buttons": [
         {
-                "text": "Contato",
-                "icon": "PaperPlaneIcon"
-            }
-]
-
+            "text": "Baixar CV",
+            "icon": "DownloadIcon"
+        },
+        {
+            "text": "Contato",
+            "icon": "PaperPlaneIcon"
+        }
+    ],
+    "services": [
+        {
+            "serviceName": "Criação de Site",
+            "src": "/images/serviços/monitor.png"
+        },
+        {
+            "serviceName": "Criação de Layout, Figma",
+            "src": "/images/serviços/layout.png"
+        },
+        {
+            "serviceName": "Responsividade",
+            "src": "/images/serviços/responsivo.png"
+        },
+        {
+            "serviceName": "Seo Otimizado",
+            "src": "/images/serviços/crescimento.png"
+        },
+        {
+            "serviceName": "Manutenção Front-End",
+            "src": "/images/serviços/chave-inglesa.png"
+        },
+        {
+            "serviceName": "Hospedagem",
+            "src": "/images/serviços/nuvem.png"
+        }
+    ],
+    "habilidades": [
+        {
+            "skill": "HTML5",
+            "positionIsEnd": false
+        },
+        {
+            "skill": "CSS3",
+            "positionIsEnd": true
+        },
+        {
+            "skill": "JAVASCRIPT",
+            "positionIsEnd": false
+        },
+        {
+            "skill": "TYPESCRIPT",
+            "positionIsEnd": true
+        },
+        {
+            "skill": "REACT",
+            "positionIsEnd": false
+        },
+        {
+            "skill": "NEXT.JS",
+            "positionIsEnd": true
+        },
+        {
+            "skill": "TAILWINDCSS",
+            "positionIsEnd": false
+        },
+        {
+            "skill": "UI | UX",
+            "positionIsEnd": true
+        }
+    ]
 }

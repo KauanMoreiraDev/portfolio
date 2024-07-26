@@ -6,80 +6,21 @@ import Button from "./components/button/button";
 import Title from "./components/title/title";
 import SubTitle from "./components/subTitle/subTitle";
 import { DownloadIcon, PaperPlaneIcon, ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
-import RoleBaixo from "./components/roleBaixo/roleBaixo"
+import RoleBaixo from "./components/roleBaixo/roleBaixo";
+import Data from "./components/data/data.json";
 
 export default function Home() {
   
+const { services, habilidades} = Data
+
   const handleClick = () => {
     console.log("pai ta dominando em AKSKAKSKAKASK");
   };
 
-  const serviços = [
-    {
-      serviço: "Criação de Site",
-      button: "Veja mais...",
-    },
-    {
-      serviço: "Criação de Layout, Figma",
-      button: "Veja mais...",
-    },
-    {
-      serviço: "Responsividade",
-      button: "Veja mais...",
-    },
-    {
-      serviço: "Seo Otimizado",
-      button: "Veja mais...",
-    },
-    {
-      serviço: "Manutenção Front-End",
-      button: "Veja mais...",
-    },
-    {
-      serviço: "Hospedagem",
-      button: "Veja mais...",
-    },
-  ];
-
-  const habilidades = [
-    {
-      skill: "HTML5",
-      positionIsEnd: false,
-    },
-    {
-      skill: "CSS3",
-      positionIsEnd: true,
-    },
-    {
-      skill: "JAVASCRIPT",
-      positionIsEnd: false,
-    },
-    {
-      skill: "TYPESCRIPT",
-      positionIsEnd: true,
-    },
-    {
-      skill: "REACT",
-      positionIsEnd: false,
-    },
-    {
-      skill: "NEXT.JS",
-      positionIsEnd: true,
-    },
-    {
-      skill: "TAILWINDCSS",
-      positionIsEnd: false,
-    },
-    {
-      skill: "UI | UX",
-      positionIsEnd: true,
-    },
-  ];
-
   return (
     <main className="bg-slate-950 font-Oswald font-light text-white">
       <div className="w-screen-lg h-full">
-        <div className="inicio mx-auto max-w-screen-lg py-10">
+        <div id="inicio" className="mx-auto max-w-screen-lg py-10">
           <div className="flex flex-col items-center content-center sm:flex-row">
             <div className="bg-slate-500 w-5/12 sm:w-1/12 h-full rounded-3xl">
               <RedesSociais />
@@ -146,7 +87,7 @@ export default function Home() {
             <RoleBaixo/>
         </div>
 
-        <div className="serviços mx-auto max-w-screen-lg m-10">
+        <div id="serviços" className="mx-auto max-w-screen-lg m-10">
           <div className="flex justify-center">
             <Title fontStyle="medium" textColor="white" label="SERVIÇOS" />
             <Title
@@ -158,27 +99,26 @@ export default function Home() {
           
             <div className="mx-auto max-w-screen-md">
               <div className="grid grid-cols-2 sm:grid-cols-3">
-                {serviços.map((srvfn, index) => (
+                {services.map((srvfn, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center m-2 p-1"
-                  >
-                    <div className="w-36 h-36 bg-lime-500" />
-                    <p>{srvfn.serviço}</p>
-                    <p>{srvfn.button}</p>
+                    className="flex flex-col items-center m-2 p-1">
+                    <Image src={srvfn.src} alt={srvfn.serviceName} width={120} height={120} />
+                    <p>{srvfn.serviceName}</p>
+                    <p>clique aqui</p>
                   </div>
                 ))}
               </div>
             </div>
           
         </div>
-        <div className="portfolio mx-auto max-w-screen-lg m-3">
+        <div id="portfolio" className="mx-auto max-w-screen-lg m-3">
           <div className="w-full h-full">
             <div className="flex flex-col items-center sm:flex-row">
-              <div className="bg-black w-11/12 sm:w-3/4 h-64 rounded-t-3xl sm:rounded-l-3xl">
+              <div className="bg-black w-11/12 sm:w-3/4 h-64 rounded-t-3xl sm:rounded-tr-none sm:rounded-l-3xl">
                 imagem/video
               </div>
-              <div className="bg-slate-600 w-11/12 sm:w-1/4 p-2 rounded-b-3xl sm:rounded-r-3xl">
+              <div className="bg-slate-600 w-11/12 sm:w-1/4 sm:h-64 p-2 rounded-b-3xl sm:rounded-bl-none sm:rounded-r-3xl">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Accusamus deserunt consequuntur ratione iure consectetur
                 praesentium unde illum voluptas explicabo aliquid nam aut, magni
@@ -192,7 +132,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="habilidades mx-auto max-w-screen-lg">
+        <div id="habilidades" className="mx-auto max-w-screen-lg">
           <div className="sm:h-32 flex items-center flex-col">
             <div className="flex flex-col h-5/6 sm:flex-row ">
             {habilidades.map((habfn, index) => (
@@ -207,7 +147,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="Contato mx-auto mt-7 max-w-screen-lg">
+        <div id="contato" className="mx-auto mt-7 max-w-screen-lg">
           <div className="bg-slate-800 rounded-3xl">
             <div className="flex flex-col sm:flex-row items-center sm:justify-center w-full">
               <div className="m-1 p-2 w-1/2">
