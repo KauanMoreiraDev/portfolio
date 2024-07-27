@@ -8,10 +8,11 @@ import SubTitle from "./components/subTitle/subTitle";
 import { DownloadIcon, PaperPlaneIcon, ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
 import RoleBaixo from "./components/roleBaixo/roleBaixo";
 import Data from "./components/data/data.json";
+import Slide from "./components/slide/slider";
 
 export default function Home() {
   
-const { services, habilidades} = Data
+const { home, services, habilidades} = Data
 
   const handleClick = () => {
     console.log("pai ta dominando em AKSKAKSKAKASK");
@@ -32,24 +33,19 @@ const { services, habilidades} = Data
                   italic="italic"
                   textSize="text-2xl"
                   textColor="text-primary"
-                  label="Olá, eu sou o Kauan!"
+                  label={home[0].title}
                 />
                 <SubTitle
                   fontStyle="regular"
                   textSize="text-xl"
                   textColor="text-primary"
-                  label="Front-end Develoaper"
+                  label={home[0].subTitle}
                 />
 
                 <div className="m-2 p-1">
-                  De Leme, São Paulo, Kauan é um especialista em front-end
-                  dedicado à criação de web sites excepcionais com Next.js! 🚀💻
-                  Combinando habilidade e criatividade, ele transforma ideias em
-                  realidades digitais impressionantes. Utilizando o poderoso
-                  framework Next.js, Kauan cria sites rápidos, dinâmicos e
-                  totalmente otimizados. Quer um site que se destaque? Ele é a
-                  escolha certa! Confie seu projeto a um profissional e veja a
-                  mágica acontecer!{" "}
+                  <div>{home[0].text1}</div>
+                  <div>{home[0].text2}</div>
+                  <div>{home[0].text3}</div>
                 </div>
 
                 <Button
@@ -116,7 +112,7 @@ const { services, habilidades} = Data
           <div className="w-full h-full">
             <div className="flex flex-col items-center sm:flex-row">
               <div className="bg-black w-11/12 sm:w-3/4 h-64 rounded-t-3xl sm:rounded-tr-none sm:rounded-l-3xl">
-                imagem/video
+                <Slide />
               </div>
               <div className="bg-slate-600 w-11/12 sm:w-1/4 sm:h-64 p-2 rounded-b-3xl sm:rounded-bl-none sm:rounded-r-3xl">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.

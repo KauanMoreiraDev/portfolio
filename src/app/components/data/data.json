@@ -1,5 +1,5 @@
 {
-    "Home": [
+    "home": [
         {
             "pictire": "/images/kauan00.png",
             "title": "Olá, eu sou Kauan!",
@@ -7,16 +7,6 @@
             "text1": "De Leme, São Paulo, Kauan é um especialista em front-end dedicado à criação de web sites excepcionais com Next.js! 🚀💻",
             "text2": "Combinando habilidade e criatividade, ele transforma ideias em realidades digitais impressionantes. Utilizando o poderoso framework Next.js, Kauan cria sites rápidos, dinâmicos e totalmente otimizados. Quer um site que se destaque? Ele é a escolha certa!",
             "text3": "Confie seu projeto a um profissional e veja a mágica acontecer!"
-        }
-    ],
-    "buttons": [
-        {
-            "text": "Baixar CV",
-            "icon": "DownloadIcon"
-        },
-        {
-            "text": "Contato",
-            "icon": "PaperPlaneIcon"
         }
     ],
     "services": [
@@ -43,6 +33,32 @@
         {
             "serviceName": "Hospedagem",
             "src": "/images/serviços/nuvem.png"
+        }
+    ],
+    "slide": [
+        {
+            "alt": "GitHub",
+            "src": "/images/githubRoxo.png"
+        },
+        {
+            "alt": "Instagram",
+            "src": "/images/instagramRoxo.png"
+        },
+        {
+            "alt": "Linkedin",
+            "src": "/images/linkedinRoxo.png"
+        },
+        {
+            "alt": "Rato, mouse",
+            "src": "/images/rato.png"
+        },
+        {
+            "alt": "GitHub",
+            "src": "/images/githubRoxo.png"
+        },
+        {
+            "alt": "Instagram",
+            "src": "/images/linkedinRoxo.png"
         }
     ],
     "habilidades": [
@@ -77,6 +93,28 @@
         {
             "skill": "UI | UX",
             "positionIsEnd": true
+        }
+    ],
+    "id": [
+        {
+            "nameId": "Início",
+            "srcId": "/"
+        },
+        {
+            "nameId": "Serviços",
+            "srcId": "#serviços"
+        },
+        {
+            "nameId": "Portfólio",
+            "srcId": "#portfolio"
+        },
+        {
+            "nameId": "Habilidades",
+            "srcId": "#habilidades"
+        },
+        {
+            "nameId": "Contato",
+            "srcId": "#contato"
         }
     ]
 }
