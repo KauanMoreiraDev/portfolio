@@ -29,8 +29,8 @@ export default function Header() {
                                                     </div>
                                                 <nav className="space-y-6">
                                                     {id.map((idfn, index) => (
-                                                        <div className="flex flex-col items-center">
-                                                            <Link key={index} href={idfn.srcId}>{idfn.nameId}</Link>
+                                                        <div key={index} className="flex flex-col items-center">
+                                                            <Link href={idfn.srcId}>{idfn.nameId}</Link>
                                                         </div>
                                                     ))}
 
