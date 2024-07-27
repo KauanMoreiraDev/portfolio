@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import Data from "/Users/Kauan/Desktop/code/next.js/portfolio/src/app/components/data/data.json";
+import Data from "@/app/components/data/data.json";
 import { useState } from "react";
 
 export default function Header() {
