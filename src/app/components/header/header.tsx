@@ -54,7 +54,7 @@ export default function Header() {
                             <nav className="text-white">
                                 <div className="space-x-6">
                                     {id.map((idfn, index) => (
-                                        <Link href={idfn.srcId}>{idfn.nameId}</Link>
+                                        <Link key={index} href={idfn.srcId}>{idfn.nameId}</Link>
                                     ))}
                                 </div>
                             </nav>

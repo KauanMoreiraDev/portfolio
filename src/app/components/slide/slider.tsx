@@ -25,7 +25,7 @@ const Carousel = () => {
         <div className="relative mx-auto overflow-hidden w-1000 h-400">
             <div className="flex transition-transform ease-in-out duration-500" style={{ transform: `translateX(-${current * 100}%)` }}>
                 {images.map((src, index) => (
-                    <img key={index} src={src} alt={`Slide ${index}`} className="w-full h-full object-cover flex-shrink-0" style={{ maxHeight: '400px' }} />
+                    <Image key={index} src={src} alt={`Slide ${index}`} className="w-full h-full object-cover flex-shrink-0" style={{ maxHeight: '400px' }} />
                 ))}
             </div>
             <button onClick={prevSlide} className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-slate-300 p-2 rounded-full">
