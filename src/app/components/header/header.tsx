@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Data from "@/app/components/data/data.json";
 import { useState } from "react";
+import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
 
 export default function Header() {
 
@@ -18,28 +19,28 @@ export default function Header() {
                     <div className="mx-auto max-w-screen-lg">
                         <div className="flex flex-row justify-between items-center">
                             <Image src={"/favicon.png"} alt="" width={40} height={40} />
-                            <button onClick={() => setOpen(!open)} >
-                                {open ? <div className="bg-lime-500 w-10 h-10"></div> :
-                                    <div className="">
+                            <button onClick={() => setOpen(!open)} className="z-10 flex items-center justify-center w-10 h-10 fixed top-2 right-6 m-4">
+                                <div className={`transition-transform duration-1000 ${open ? 'rotate-90' : ''}`}>
+                                    {open ? <HamburgerMenuIcon className="w-10 h-10"/> : <Cross1Icon className="w-10 h-10 flex flex-col items-end" />}
+                                </div>
+                            </button>
+                                { !open && (
+
                                         <div className="flex flex-col items-center">
                                             <div className="w-screen h-screen">
                                                 <div className="bg-blue-300 opacity-70 absolute inset-0">
-                                                    <div className="flex flex-col items-end w-full">
-                                                        <div className="bg-pink-500 w-10 h-10" />
-                                                    </div>
+                                                    
                                                 <nav className="space-y-6">
                                                     {id.map((idfn, index) => (
                                                         <div key={index} className="flex flex-col items-center">
                                                             <Link href={idfn.srcId}>{idfn.nameId}</Link>
                                                         </div>
                                                     ))}
-
                                                 </nav>
-                                                </div>
                                             </div>
                                         </div>
-                                    </div>}
-                            </button>
+                                    </div>)}
+                            
 
                         </div>
                     </div>
