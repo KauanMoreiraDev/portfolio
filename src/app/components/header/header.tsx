@@ -18,9 +18,9 @@ export default function Header() {
                     <div className="mx-auto max-w-screen-lg">
                         <div className="flex flex-row justify-between items-center">
                             <Image src={"/favicon.png"} alt="" width={40} height={40} />
-                            <button onClick={() => setOpen(!open)}>
+                            <button onClick={() => setOpen(!open)} >
                                 {open ? <div className="bg-lime-500 w-10 h-10"></div> :
-                                    <div>
+                                    <div className="">
                                         <div className="flex flex-col items-center">
                                             <div className="w-screen h-screen">
                                                 <div className="bg-blue-300 opacity-70 absolute inset-0">

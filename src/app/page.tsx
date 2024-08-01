@@ -12,10 +12,18 @@ import Slide from "./components/slide/slider";
 
 export default function Home() {
   
-const { home, services, habilidades} = Data
+const { home, services, habilidades, id} = Data
 
   const handleClick = () => {
     console.log("pai ta dominando em AKSKAKSKAKASK");
+  };
+
+  const openPdf = () => {
+    window.open('/images/curriculo_kauan_moreira.pdf','_black');
+  };
+
+  const ancorContato = () => {
+    window.location.href = (id[4].srcId);
   };
 
   return (
@@ -49,7 +57,7 @@ const { home, services, habilidades} = Data
                 </div>
 
                 <Button
-                  onClick={handleClick}
+                  onClick={openPdf}
                   label="Baixar CV"
                   icon={<DownloadIcon/>}
                   wSize="w-full"
@@ -58,7 +66,7 @@ const { home, services, habilidades} = Data
                   textColor="text-white"
                 />
                 <Button
-                  onClick={handleClick}
+                  onClick={ancorContato}
                   label="Contato"
                   icon={<PaperPlaneIcon/>}
                   wSize="w-full"
@@ -73,9 +81,9 @@ const { home, services, habilidades} = Data
                 <Image
                   src="/images/kauan00.png"
                   alt=""
-                  width={250}
-                  height={250}
-                  className="w-full h-full rounded-tl-[197px] rounded-tr-[150px] rounded-bl-[347px] rounded-br-[116px]"
+                  width={370}
+                  height={370}
+                  className="w-full h-full rounded-tl-[197px] rounded-tr-[150px] rounded-bl-[347px] rounded-br-[116px] "
                 />
               </div>
             </div>
