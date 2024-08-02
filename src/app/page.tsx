@@ -117,16 +117,17 @@ const { home, services, habilidades, id} = Data
           
         </div>
         <div id="portfolio" className="mx-auto max-w-screen-lg m-3">
-          <div className="w-full h-full">
-            <div className="flex flex-col items-center sm:flex-row">
-              <div className="bg-black w-11/12 sm:w-3/4 h-64 rounded-t-3xl sm:rounded-tr-none sm:rounded-l-3xl">
+          <div className="w-full h-full bg-black ">
+            <div className="flex flex-col items-center sm:items-stretch sm:flex-row">
+                <div className="w-11/12 sm:w-3/4 h-4/5 rounded-t-3xl sm:rounded-tr-none sm:rounded-l-3xl">
                 <Slide />
-              </div>
-              <div className="bg-slate-600 w-11/12 sm:w-1/4 sm:h-64 p-2 rounded-b-3xl sm:rounded-bl-none sm:rounded-r-3xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus deserunt consequuntur ratione iure consectetur
-                praesentium unde illum voluptas explicabo aliquid nam aut, magni
-                error nobis qui nesciunt, recusandae officiis commodi!
+                </div>
+              <div className="bg-slate-600 w-11/12 sm:w-1/4 sm:min-h-full p-2 rounded-b-3xl sm:rounded-bl-none sm:rounded-r-3xl align-middle">
+              <p className="">
+                Lading page totalmente responsiva de uma barbearia aqui da minha região, exibindo seus serviços oferecidos, designer e desenvolvimento front-end. Utilizei das ferramentas Figma, Next.js, Typescript, TailwindCss e consumo por Json. Integração com a API do Instagram e Google Maps
+                </p>
+              
+              
               </div>
             </div>
           </div>

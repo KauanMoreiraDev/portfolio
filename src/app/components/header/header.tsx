@@ -12,6 +12,10 @@ export default function Header() {
 
     const [open, setOpen] = useState(true)
 
+    const Close = () => {
+        setOpen(true)
+    }
+
     return (
         <header className="sticky top-0 z-10">
             <div className="block sm:hidden">
@@ -34,7 +38,7 @@ export default function Header() {
                                             <nav className="space-y-6">
                                                 {id.map((idfn, index) => (
                                                     <div key={index} className="flex flex-col items-center">
-                                                        <Link href={idfn.srcId}>{idfn.nameId}</Link>
+                                                        <Link href={idfn.srcId} onClick={Close}>{idfn.nameId}</Link>
                                                     </div>
                                                 ))}
                                             </nav>
