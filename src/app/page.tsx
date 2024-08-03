@@ -104,18 +104,16 @@ const { home, services, habilidades, id} = Data
             <div className="mx-auto max-w-screen-md">
               <div className="grid grid-cols-2 sm:grid-cols-3">
                 {services.map((srvfn, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col items-center m-2 p-1">
-                    <Image src={srvfn.src} alt={srvfn.serviceName} width={120} height={120} />
+                  <div key={index} className="flex flex-col items-center m-2 p-1">
+                    <Image src={srvfn.src} alt={`Imagem para ${srvfn.serviceName}`} width={120} height={120} />
                     <p>{srvfn.serviceName}</p>
                     <p>clique aqui</p>
                   </div>
                 ))}
               </div>
-            </div>
-          
+            </div>  
         </div>
+
         <div id="portfolio" className="mx-auto max-w-screen-lg m-3">
           <div className="w-full h-full bg-black ">
             <div className="flex flex-col items-center sm:items-stretch sm:flex-row">
@@ -126,8 +124,6 @@ const { home, services, habilidades, id} = Data
               <p className="">
                 Lading page totalmente responsiva de uma barbearia aqui da minha região, exibindo seus serviços oferecidos, designer e desenvolvimento front-end. Utilizei das ferramentas Figma, Next.js, Typescript, TailwindCss e consumo por Json. Integração com a API do Instagram e Google Maps
                 </p>
-              
-              
               </div>
             </div>
           </div>
