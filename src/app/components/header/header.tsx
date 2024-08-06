@@ -21,7 +21,7 @@ export default function Header() {
             <div className="block sm:hidden">
                 <div className="bg-slate-800">
                     <div className="mx-auto max-w-screen-lg">
-                        <div className="flex flex-row justify-between items-center">
+                        <div className="flex flex-row justify-between items-center mx-4">
                             <Image src={"/favicon.png"} alt="" width={40} height={40} className={!open ? "hidden" : "" } />
 
 

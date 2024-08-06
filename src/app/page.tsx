@@ -29,7 +29,7 @@ const { home, services, habilidades, id} = Data
   return (
     <main className="bg-slate-950 font-Oswald font-light text-white">
       <div className="w-screen-lg h-full">
-        <div id="inicio" className="mx-auto max-w-screen-lg py-10">
+        <div id="inicio" className="mx-auto max-w-screen-lg min-h-screen py-10">
           <div className="flex flex-col items-center content-center sm:flex-row">
             <div className="bg-slate-500 w-5/12 sm:w-1/12 h-full rounded-3xl">
               <RedesSociais />
@@ -40,7 +40,7 @@ const { home, services, habilidades, id} = Data
                   fontStyle="font-medium"
                   italic="italic"
                   textSize="text-2xl"
-                  textColor="text-primary"
+                  textColor="primary"
                   label={home[0].title}
                 />
                 <SubTitle
@@ -91,21 +91,22 @@ const { home, services, habilidades, id} = Data
             <RoleBaixo/>
         </div>
 
-        <div id="serviços" className="mx-auto max-w-screen-lg m-10">
+        <div id="serviços" className="mx-auto max-w-screen-lg min-h-screen m-10">
           <div className="flex justify-center">
-            <Title fontStyle="medium" textColor="white" label="SERVIÇOS" />
-            <Title
-              fontStyle="medium"
-              textColor="white"
-              label="O QUE EU OFEREÇO"
-            />
+          <Title
+                  fontStyle="font-medium"
+                  italic="italic"
+                  textSize="text-2xl"
+                  textColor="primary"
+                  label="O QUE EU OFEREÇO"
+                />
           </div>
           
             <div className="mx-auto max-w-screen-md">
               <div className="grid grid-cols-2 sm:grid-cols-3">
                 {services.map((srvfn, index) => (
                   <div key={index} className="flex flex-col items-center m-2 p-1">
-                    <Image src={srvfn.src} alt={`Imagem para ${srvfn.serviceName}`} width={120} height={120} />
+                    <Image src={srvfn.src} alt={`Imagem para ${srvfn.serviceName}`} width={70} height={70} className="sm:w-32 sm:h-32"/>
                     <p>{srvfn.serviceName}</p>
                     <p>clique aqui</p>
                   </div>
@@ -114,7 +115,7 @@ const { home, services, habilidades, id} = Data
             </div>  
         </div>
 
-        <div id="portfolio" className="mx-auto max-w-screen-lg m-3">
+        <div id="portfolio" className="mx-auto max-w-screen-lg min-h-screen m-3">
           <div className="w-full h-full bg-black ">
             <div className="flex flex-col items-center sm:items-stretch sm:flex-row">
                 <div className="w-11/12 sm:w-3/4 h-4/5 rounded-t-3xl sm:rounded-tr-none sm:rounded-l-3xl">

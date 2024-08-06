@@ -10,7 +10,7 @@ interface Title {
 
 const Title = ({fontFamily, fontStyle, textSize, textColor, italic, label} : Title ) => {
     return(
-        <div className={`m-2 p-1 font-${fontFamily} ${fontStyle} ${textSize} ${textColor} ${italic}`}
+        <div className={`m-2 p-1 font-${fontFamily} ${fontStyle} ${textSize} text-${textColor} ${italic}`}
         >
             {label}
         </div>
