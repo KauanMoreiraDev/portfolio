@@ -8,7 +8,7 @@ import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
 
 export default function Header() {
 
-    const { id } = Data
+    const { menu } = Data
 
     const [open, setOpen] = useState(true)
 
@@ -36,9 +36,9 @@ export default function Header() {
                                         <div className="bg-blue-300 opacity-70 absolute inset-0">
 
                                             <nav className="space-y-6">
-                                                {id.map((idfn, index) => (
+                                                {menu.map((idfn, index) => (
                                                     <div key={index} className="flex flex-col items-center">
-                                                        <Link href={idfn.srcId} onClick={Close}>{idfn.nameId}</Link>
+                                                        <Link href={idfn.srcLink} onClick={Close}>{idfn.nameLink}</Link>
                                                     </div>
                                                 ))}
                                             </nav>
@@ -59,8 +59,8 @@ export default function Header() {
                             <Image src={"/logo.png"} alt="" width={40} height={40} />
                             <nav className="text-white">
                                 <div className="space-x-6">
-                                    {id.map((idfn, index) => (
-                                        <Link key={index} href={idfn.srcId}>{idfn.nameId}</Link>
+                                    {menu.map((idfn, index) => (
+                                        <Link key={index} href={idfn.srcLink}>{idfn.nameLink}</Link>
                                     ))}
                                 </div>
                             </nav>
