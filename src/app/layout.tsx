@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "./components/header/header";
+import { ThemeProvider } from "./context/ThemeContext";
+import Header from "./components/newHeader/header";
 
 export const metadata: Metadata = {
   title: "Início | Kauan Moreira",
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className="scroll-smooth">
       <body>
-        <Header />
-        {children}
+        <ThemeProvider>
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

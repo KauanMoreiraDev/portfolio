@@ -95,26 +95,26 @@
             "positionIsEnd": true
         }
     ],
-    "id": [
+    "menu": [
         {
-            "nameId": "Início",
-            "srcId": "/"
+            "nameLink": "Início",
+            "srcLink": "/"
         },
         {
-            "nameId": "Serviços",
-            "srcId": "#serviços"
+            "nameLink": "Serviços",
+            "srcLink": "#serviços"
         },
         {
-            "nameId": "Portfólio",
-            "srcId": "#portfolio"
+            "nameLink": "Portfólio",
+            "srcLink": "#portfolio"
         },
         {
-            "nameId": "Habilidades",
-            "srcId": "#habilidades"
+            "nameLink": "Habilidades",
+            "srcLink": "#habilidades"
         },
         {
-            "nameId": "Contato",
-            "srcId": "#contato"
+            "nameLink": "Contato",
+            "srcLink": "#contato"
         }
     ]
 }

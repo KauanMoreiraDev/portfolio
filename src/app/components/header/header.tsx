@@ -22,7 +22,7 @@ export default function Header() {
                 <div className="bg-slate-800">
                     <div className="mx-auto max-w-screen-lg">
                         <div className="flex flex-row justify-between items-center mx-4">
-                            <Image src={"/favicon.png"} alt="" width={40} height={40} className={!open ? "hidden" : "" } />
+                            <Image src={"/logo.png"} alt="" width={40} height={40} className={!open ? "hidden" : "" } />
 
 
                             <button onClick={() => setOpen(!open)} className="z-10 flex items-center justify-center w-10 h-10 fixed -top-3 right-0 m-4">
@@ -56,7 +56,7 @@ export default function Header() {
                 <div className="bg-slate-800">
                     <div className="mx-auto max-w-screen-lg">
                         <div className="flex flex-row justify-between items-center">
-                            <Image src={"/favicon.png"} alt="" width={40} height={40} />
+                            <Image src={"/logo.png"} alt="" width={40} height={40} />
                             <nav className="text-white">
                                 <div className="space-x-6">
                                     {id.map((idfn, index) => (
