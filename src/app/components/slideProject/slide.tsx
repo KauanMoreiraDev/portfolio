@@ -22,8 +22,8 @@ export default function SlideProjects() {
             linkFigma: "https://instagram.com/kauannmoreira_"
         },
         {
-            title: "Lading Page Ag Balloons",
-            label: "Desenvolvemos este projeto para uma empresa de psicologia e bem-estar em Leme-SP, focada em promover a saúde mental e o equilíbrio emocional. O site foi projetado para destacar os serviços oferecidos e a carteira de profissionais, com um design acolhedor e funcional, que reflete a dedicação dos profissionais ao bem-estar dos clientes.",
+            title: "Site Hotel Marina do Lago",
+            label: "Desenvolvemos este projeto para o Hotel Marina do Lago em Santa Cruz da Conceição-SP, focado em destacar o conforto, as belezas naturais ao redor do hotel e as atividades de lazer oferecidas. O site foi projetado para refletir a tranquilidade, hospitalidade e as experiências únicas que o hotel proporciona.",
             linkFigma: "https://instagram.com/kauannmoreira_"
         },
         {
@@ -45,11 +45,12 @@ export default function SlideProjects() {
 
                     <div key={index} className="min-w-full h-full p-5">
                         <div className="flex flex-col sm:flex-row">
-                            <div className="bg-lime-500 w-full h-full">
+                            <div className="bg-slate-300 w-full h-full">
                                 <Slider />
                             </div>
                             <div className="flex flex-col w-full sm:w-1/2 h-full p-3">
                                 <div className="w-full h-1/6 text-xl text-primary py-2">{item.title}</div>
+                                    {/* label com apenas 276 caracteres, nada mais */}
                                 <div className="w-full h-48 overflow-hidden">{item.label}</div>
                                 <div className="w-full h-1/6 py-2">
                                     <div className="flex flex-row justify-start">
@@ -67,7 +68,7 @@ export default function SlideProjects() {
                                         </div>
                                     </div>
                                 </div>
-                                <button onClick={() => acessFigma(item.linkFigma)} className="bg-secoundary rounded-3xl p-1">Ver projeto completo</button>
+                                <button onClick={() => acessFigma(item.linkFigma)} className="bg-secoundary rounded-3xl p-1 text-white">Ver projeto completo</button>
                                 <div className="mx-auto">
                                     <button onClick={prevSlide} className="p-1"><ChevronLeft /></button>
                                     <button onClick={nextSlide} className="p-1"><ChevronRight /></button>

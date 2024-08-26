@@ -175,7 +175,7 @@ export default function Home() {
 
               <div className="text-2xl text-center">Contato</div>
               <div className="w-full text-center text-xl ">Construa seu espaço digital com nossos sites personalizados</div>
-              <div className="flex flex-row justify-start w-full">
+              <div className="flex flex-col sm:flex-row justify-start w-full">
                 <div className="">
                   <RedesSociais inName={true} position="start" />
                 </div>
