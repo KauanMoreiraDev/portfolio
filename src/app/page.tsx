@@ -43,7 +43,7 @@ export default function Home() {
           <div className="mx-auto max-w-screen-lg h-full py-16">
             <div className="flex flex-col items-center  sm:flex-row">
               <div className={`w-5/12 sm:w-1/12 h-full rounded-3xl ${theme === "dark" ? "bg-slate-500" : "bg-gray-500"}`}>
-                <RedesSociais inName={false} position="center" />
+                <RedesSociais inName={false} position="center" display="flex" />
               </div>
               <div className={`w-4/6 h-full rounded-3xl ${theme === "dark" ? "bg-blue-950" : "bg-gray-300"} `}>
                 <div className="flex flex-col p-3">
@@ -109,7 +109,6 @@ export default function Home() {
                   <div key={index} className="flex flex-col items-center m-2 p-1">
                     <Image src={srvfn.src} alt={`Imagem para ${srvfn.serviceName}`} width={70} height={70} className="sm:w-32 sm:h-32" />
                     <p>{srvfn.serviceName}</p>
-                    <p>clique aqui</p>
                   </div>
                 ))}
               </div>
@@ -177,7 +176,7 @@ export default function Home() {
               <div className="w-full text-center text-xl ">Construa seu espaço digital com nossos sites personalizados</div>
               <div className="flex flex-col sm:flex-row justify-start w-full">
                 <div className="">
-                  <RedesSociais inName={true} position="start" />
+                  <RedesSociais inName={true} position="center" display="grid" />
                 </div>
               </div>
             </div>

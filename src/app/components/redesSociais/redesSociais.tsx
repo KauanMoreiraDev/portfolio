@@ -3,10 +3,11 @@ import Link from "next/link";
 
 interface contatoProps {
   inName: boolean
-  position: "center" | "start"
+  position?: "center" | "start",
+  display?: "flex" | "grid",
 }
 
-export default function RedesSociais({ inName, position = "center" }: contatoProps) {
+export default function RedesSociais({ inName, position = "center", display = "flex" }: contatoProps) {
 
   const contato = [{
     nome: "Linkein",
@@ -55,10 +56,10 @@ export default function RedesSociais({ inName, position = "center" }: contatoPro
       </div>
 
       <div className="Mobile">
-        <div className="grid grid-cols-2 gap-3 p-1 sm:hidden ">
+        <div className={`${display === "flex" ? "flex flex-row" : "grid grid-cols-2"} gap-3 p-1 sm:hidden`}>
         {contato.map((item, index) => (
               <Link key={index} href={item.link} target="_blank" className="hover:scale-110">
-                <div className={`flex flex-col items-center `}>
+                <div className={`flex flex-col ${position === "center" ? "items-center" : "items-start" }`}>
                   <Image src={item.image} alt={item.nome} width={40} height={40} className="hover:bg-primary rounded-full" />
                   <div className="flex flex-col items-center font-medium">
                     <span className="px-2 text-primary">{inName ? item.nome : ""}</span>
