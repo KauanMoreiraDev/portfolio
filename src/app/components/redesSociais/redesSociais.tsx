@@ -55,7 +55,7 @@ export default function RedesSociais({ inName, position = "center" }: contatoPro
       </div>
 
       <div className="Mobile">
-        <div className="flex flex-col sm:flex-row justify-center gap-3 p-1 sm:hidden ">
+        <div className="flex flex-row justify-center gap-3 p-1 sm:hidden ">
         {contato.map((item, index) => (
               <Link key={index} href={item.link} target="_blank" className="hover:scale-110">
                 <div className={`flex flex-row ${position === "center" ? "items-center" : "items-start" }`}>
