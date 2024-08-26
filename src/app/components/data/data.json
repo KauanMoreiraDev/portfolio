@@ -61,40 +61,7 @@
             "src": "/images/linkedinRoxo.png"
         }
     ],
-    "habilidades": [
-        {
-            "skill": "HTML5",
-            "positionIsEnd": false
-        },
-        {
-            "skill": "CSS3",
-            "positionIsEnd": true
-        },
-        {
-            "skill": "JAVASCRIPT",
-            "positionIsEnd": false
-        },
-        {
-            "skill": "TYPESCRIPT",
-            "positionIsEnd": true
-        },
-        {
-            "skill": "REACT",
-            "positionIsEnd": false
-        },
-        {
-            "skill": "NEXT.JS",
-            "positionIsEnd": true
-        },
-        {
-            "skill": "TAILWINDCSS",
-            "positionIsEnd": false
-        },
-        {
-            "skill": "UI | UX",
-            "positionIsEnd": true
-        }
-    ],
+    
     "menu": [
         {
             "nameLink": "Início",

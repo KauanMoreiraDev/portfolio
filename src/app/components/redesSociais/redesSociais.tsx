@@ -1,49 +1,71 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function RedesSociais() {
+interface contatoProps {
+  inName: boolean
+  position: "center" | "start"
+}
 
-const contato = [{
+export default function RedesSociais({ inName, position = "center" }: contatoProps) {
+
+  const contato = [{
     nome: "Linkein",
+    nickName: "Kauan Moreira",
     link: "https://www.linkedin.com/in/kauan-moreira-a5449426a/",
     image: "/images/linkedin.png",
-    imageHover: "/images/linkedinRoxo.png",
   },
   {
     nome: "Git Hub",
+    nickName: "@kauanmoreiradev_",
     link: "https://github.com/KauanMoreiraDev",
     image: "/images/github.png",
-    imageHover: "/images/githubRoxo.png",
   },
   {
     nome: "Instagram",
+    nickName: "@kauannmoreira_",
     link: "https://instagram.com/kauannmoreira_",
     image: "/images/instagram.png",
-    imageHover: "/images/instagramRoxo.png",
   },
   {
     nome: "Email",
+    nickName: "kauanmoreira457@gmail.com",
     link: "https://mail.google.com/mail/u/0/?fs=1&to=kauanmoreira457@gmail.com&tf=cm",
     image: "/images/o-email.png",
-    imageHover: "/images/o-emailRoxo.png",
   }]
 
   return (
     <div className="w-full h-full">
-      <div className="hidden sm:block">
-      <div className="flex flex-col items-center space-y-3 py-2 p-1">
-          {contato.map((cttfn, index) => (
-            <Link key={index} href={cttfn.link} target="_blank" className="rounded-full hover:bg-primary hover:scale-110">
-              <Image src={cttfn.image} alt={cttfn.nome} width={40} height={40} className="" /></Link>
-          ))}
+
+      <div className="Deskto">
+        <div className="hidden sm:block">
+          <div className="flex flex-col items-start space-y-3 py-2 p-1">
+            {contato.map((item, index) => (
+              <Link key={index} href={item.link} target="_blank" className="hover:scale-110">
+                <div className={`flex flex-row ${position === "center" ? "items-center" : "items-start" }`}>
+                  <Image src={item.image} alt={item.nome} width={40} height={40} className="hover:bg-primary rounded-full" />
+                  <div className="flex flex-col items-start font-medium">
+                    <span className="px-2 text-primary">{inName ? item.nome : ""}</span>
+                    <span className="px-2 text-sm">{inName ? item.nickName : ""}</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
-        </div>
-      <div className="flex flex-row justify-center gap-3 p-1 sm:hidden ">
-          {contato.map((cttfn, index) => (
-            <Link key={index} href={cttfn.link} target="_blank" className="rounded-full hover:bg-primary hover:scale-110">
-              <Image src={cttfn.image} alt={cttfn.nome} width={40} height={40} className="" /></Link>
+      </div>
+
+      <div className="Mobile">
+        <div className="flex flex-row justify-center gap-3 p-1 sm:hidden ">
+          {contato.map((item, index) => (
+            <Link key={index} href={item.link} target="_blank" className="hover:scale-110">
+              <div className={`flex flex-row ${position === "center" ? "items-center" : "items-start" }`}>
+                <Image src={item.image} alt={item.nome} width={40} height={40} className="hover:bg-primary rounded-full" />
+                <span className="px-2">{inName ? item.nome : ""}</span>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
+    </div>
   );
 }
