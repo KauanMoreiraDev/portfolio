@@ -4,6 +4,7 @@ import { useTheme } from "@/app/context/ThemeContext";
 import useSlider from "../useSlide/functionsSlide";
 import Slider from "../slideImages/slider";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 export default function SlideProjects() {
 
@@ -19,17 +20,14 @@ export default function SlideProjects() {
         {
             title: "Lading Page Eezycare",
             label: "Desenvolvemos este projeto para uma empresa de psicologia e bem-estar em Leme-SP, focada em promover a saúde mental e o equilíbrio emocional. O site foi projetado para destacar os serviços oferecidos e a carteira de profissionais, com um design acolhedor e funcional, que reflete a dedicação dos profissionais ao bem-estar dos clientes.",
-            linkFigma: "https://instagram.com/kauannmoreira_"
+            linkFigma: "https://instagram.com/kauannmoreira_",
+            image: "/images/slider/eezycarePortfolio.png"
         },
         {
             title: "Site Hotel Marina do Lago",
             label: "Desenvolvemos este projeto para o Hotel Marina do Lago em Santa Cruz da Conceição-SP, focado em destacar o conforto, as belezas naturais ao redor do hotel e as atividades de lazer oferecidas. O site foi projetado para refletir a tranquilidade, hospitalidade e as experiências únicas que o hotel proporciona.",
-            linkFigma: "https://instagram.com/kauannmoreira_"
-        },
-        {
-            title: "Landing Page Pipocas Carolina",
-            label: "Desenvolvemos este projeto para uma empresa de psicologia e bem-estar em Leme-SP, focada em promover a saúde mental e o equilíbrio emocional. O site foi projetado para destacar os serviços oferecidos e a carteira de profissionais, com um design acolhedor e funcional, que reflete a dedicação dos profissionais ao bem-estar dos clientes.",
-            linkFigma: "https://instagram.com/kauannmoreira_"
+            linkFigma: "https://instagram.com/kauannmoreira_",
+            image: "/images/slider/hotelv3Portfolio.png"
         }
     ]
 
@@ -46,7 +44,7 @@ export default function SlideProjects() {
                     <div key={index} className="min-w-full h-full p-5">
                         <div className="flex flex-col sm:flex-row">
                             <div className="bg-slate-300 w-full h-full">
-                                <Slider />
+                                <Image src={item.image} alt="" width={500} height={500} className="w-full h-full" ></Image>
                             </div>
                             <div className="flex flex-col w-full sm:w-1/2 h-full p-3">
                                 <div className="w-full h-1/6 text-xl text-primary py-2">{item.title}</div>
