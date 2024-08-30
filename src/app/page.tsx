@@ -10,6 +10,7 @@ import { Download, SendHorizontal } from "lucide-react";
 import RoleBaixo from "./components/roleBaixo/roleBaixo";
 import Data from "./components/data/data.json";
 import SlideProjects from "./components/slideProject/slide";
+import { useState, useEffect, useRef } from "react";
 
 
 const { home, services, menu } = Data
@@ -36,10 +37,45 @@ export default function Home() {
     window.location.href = (menu[4].srcLink);
   };
 
+  // const elements = document.querySelectorAll('.ScrollFade');
+
+  // const myObserver = new IntersectionObserver((inf) => {
+
+  //   inf.forEach((visible) => {
+  //     visible.isIntersecting === true ? visible.target.classList.add('opacity-100') : visible.target.classList.remove('opacity-100')
+  //   })
+  // });
+
+  // elements.forEach((elements) => myObserver.observe(elements))
+
+  // const [visible, setVisible] = useState(false);
+  // const elementRef = useRef(null);
+
+  // useEffect(() => {
+
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       const [entry] = entries;
+  //       entry.isIntersecting ? setVisible(true) : setVisible(false)
+  //       console.log(entry)
+  //     },
+  //     {
+  //       threshold: 0.1, // Altere o valor de acordo com a porcentagem de visibilidade necessária
+  //     }
+  //   );
+
+  //   elementRef.current ? observer.observe(elementRef.current) : "";
+
+  //   return() => {
+  //     elementRef.current ? observer.unobserve(elementRef.current) : "";
+  //   }
+  //  
+  //}, []);
+
   return (
     <main className={`font-Oswald font-light ${theme === "dark" ? "bg-slate-950 text-white" : "bg-slate-400 text-black"}`}>
       <div className="w-screen-lg h-full">
-        <div id="inicio">
+        <div id="inicio" className="ScrollFade">
           <div className="mx-auto max-w-screen-lg h-full py-16">
             <div className="flex flex-col items-center  sm:flex-row">
               <div className={`w-5/12 sm:w-1/12 h-full rounded-3xl ${theme === "dark" ? "bg-slate-500" : "bg-gray-500"}`}>
@@ -118,8 +154,13 @@ export default function Home() {
 
         <div id="portfolio">
           <div className="mx-auto max-w-screen-lg h-full py-16">
-            
-                <SlideProjects></SlideProjects>
+
+            <SlideProjects position={true} whatProject="eezycare" />
+
+
+            <SlideProjects position={false} whatProject="hotel" />
+
+
 
           </div>
         </div>
@@ -127,24 +168,30 @@ export default function Home() {
         <div id="habilidades">
           <div className="mx-auto max-w-screen-lg py-16">
 
-            <div className="">habilidades</div>
+            <div className="flex justify-center">
+              <Title
+                fontStyle="font-medium" italic="italic"
+                textSize="text-2xl" textColor="primary"
+                label="HABILIDADES"
+              />
+            </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 items-center justify-center">
 
               <div className="html w-full h-32 sm:h-full flex flex-col items-center justify-end font-medium hover:scale-110">
-                <svg xmlns="http://www.w3.org/2000/svg" width="45%" height="45%" viewBox="0 0 128 128"><path fill="#840090" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z" /><path fill="#A21CAF" d="m64 116.8l36.378-10.086l8.559-95.878H64z" /><path fill={theme === "dark" ? "#020617" : "#94a3b8" } d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692l3.382 37.927H64zm0 35.743l-.061.017l-15.327-4.14l-.979-10.975H33.816l1.928 21.609l28.193 7.826l.063-.017z" /><path fill={theme === "dark" ? "#020617" : "#94a3b8" } d="M63.952 52.455v13.763h16.947l-1.597 17.849l-15.35 4.143v14.319l28.215-7.82l.207-2.325l3.234-36.233l.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092l.628-6.978l.329-3.692z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45%" height="45%" viewBox="0 0 128 128"><path fill="#840090" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z" /><path fill="#A21CAF" d="m64 116.8l36.378-10.086l8.559-95.878H64z" /><path fill={theme === "dark" ? "#020617" : "#94a3b8"} d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692l3.382 37.927H64zm0 35.743l-.061.017l-15.327-4.14l-.979-10.975H33.816l1.928 21.609l28.193 7.826l.063-.017z" /><path fill={theme === "dark" ? "#020617" : "#94a3b8"} d="M63.952 52.455v13.763h16.947l-1.597 17.849l-15.35 4.143v14.319l28.215-7.82l.207-2.325l3.234-36.233l.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092l.628-6.978l.329-3.692z" /></svg>
                 Html 5
               </div>
               <div className="css w-full h-32 sm:h-full flex flex-col items-center justify-end font-medium hover:scale-110">
-                <svg xmlns="http://www.w3.org/2000/svg" width="45%" height="45%" viewBox="0 0 128 128"><path fill="#840090" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754l-45.243 12.543z" /><path fill="#A21CAF" d="m64.001 117.062l36.559-10.136l8.601-96.354h-45.16z" /><path fill={theme === "dark" ? "#020617" : "#94a3b8" } d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711l-3.4 38.114h-30.95z" /><path fill={theme === "dark" ? "#020617" : "#94a3b8" } d="m64.083 87.349l-.061.018l-15.403-4.159l-.985-11.031H33.752l1.937 21.717l28.331 7.863l.063-.018z" /><path fill={theme === "dark" ? "#020617" : "#94a3b8" } d="m81.127 64.675l-1.666 18.522l-15.426 4.164v14.39l28.354-7.858l.208-2.337l2.406-26.881z" /><path fill={theme === "dark" ? "#020617" : "#94a3b8" } d="M64.048 23.435v13.831H30.64l-.277-3.108l-.63-7.012l-.331-3.711zm-.047 27.996v13.831H48.792l-.277-3.108l-.631-7.012l-.33-3.711z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45%" height="45%" viewBox="0 0 128 128"><path fill="#840090" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754l-45.243 12.543z" /><path fill="#A21CAF" d="m64.001 117.062l36.559-10.136l8.601-96.354h-45.16z" /><path fill={theme === "dark" ? "#020617" : "#94a3b8"} d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711l-3.4 38.114h-30.95z" /><path fill={theme === "dark" ? "#020617" : "#94a3b8"} d="m64.083 87.349l-.061.018l-15.403-4.159l-.985-11.031H33.752l1.937 21.717l28.331 7.863l.063-.018z" /><path fill={theme === "dark" ? "#020617" : "#94a3b8"} d="m81.127 64.675l-1.666 18.522l-15.426 4.164v14.39l28.354-7.858l.208-2.337l2.406-26.881z" /><path fill={theme === "dark" ? "#020617" : "#94a3b8"} d="M64.048 23.435v13.831H30.64l-.277-3.108l-.63-7.012l-.331-3.711zm-.047 27.996v13.831H48.792l-.277-3.108l-.631-7.012l-.33-3.711z" /></svg>
                 Css 3
               </div>
               <div className="javascript w-full h-32 sm:h-full flex flex-col items-center justify-end font-medium hover:scale-110">
-                <svg xmlns="http://www.w3.org/2000/svg" width="45%" height="45%" viewBox="0 0 128 128"><path fill="#840090" d="M1.408 1.408h125.184v125.185H1.408z"/><path fill={theme === "dark" ? "#020617" : "#94a3b8" } d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981c-3.832-1.761-8.104-3.022-9.377-5.926c-.452-1.69-.512-2.642-.226-3.665c.821-3.32 4.784-4.355 7.925-3.403c2.023.678 3.938 2.237 5.093 4.724c5.402-3.498 5.391-3.475 9.163-5.879c-1.381-2.141-2.118-3.129-3.022-4.045c-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235c-5.926 6.724-4.236 18.492 2.975 23.335c7.104 5.332 17.54 6.545 18.873 11.531c1.297 6.104-4.486 8.08-10.234 7.378c-4.236-.881-6.592-3.034-9.139-6.949c-4.688 2.713-4.688 2.713-9.508 5.485c1.143 2.499 2.344 3.63 4.26 5.795c9.068 9.198 31.76 8.746 35.83-5.176c.165-.478 1.261-3.666.38-8.581M69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149c-1.713 3.558-6.152 3.117-8.175 2.427c-2.059-1.012-3.106-2.451-4.319-4.485c-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901c4.462 2.678 10.459 3.499 16.731 2.059c4.082-1.189 7.604-3.652 9.448-7.401c2.666-4.915 2.094-10.864 2.07-17.444c.06-10.735.001-21.468.001-32.237"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45%" height="45%" viewBox="0 0 128 128"><path fill="#840090" d="M1.408 1.408h125.184v125.185H1.408z" /><path fill={theme === "dark" ? "#020617" : "#94a3b8"} d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981c-3.832-1.761-8.104-3.022-9.377-5.926c-.452-1.69-.512-2.642-.226-3.665c.821-3.32 4.784-4.355 7.925-3.403c2.023.678 3.938 2.237 5.093 4.724c5.402-3.498 5.391-3.475 9.163-5.879c-1.381-2.141-2.118-3.129-3.022-4.045c-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235c-5.926 6.724-4.236 18.492 2.975 23.335c7.104 5.332 17.54 6.545 18.873 11.531c1.297 6.104-4.486 8.08-10.234 7.378c-4.236-.881-6.592-3.034-9.139-6.949c-4.688 2.713-4.688 2.713-9.508 5.485c1.143 2.499 2.344 3.63 4.26 5.795c9.068 9.198 31.76 8.746 35.83-5.176c.165-.478 1.261-3.666.38-8.581M69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149c-1.713 3.558-6.152 3.117-8.175 2.427c-2.059-1.012-3.106-2.451-4.319-4.485c-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901c4.462 2.678 10.459 3.499 16.731 2.059c4.082-1.189 7.604-3.652 9.448-7.401c2.666-4.915 2.094-10.864 2.07-17.444c.06-10.735.001-21.468.001-32.237" /></svg>
                 JavaScript
               </div>
               <div className="typescript w-full h-32 sm:h-full flex flex-col items-center justify-end font-medium hover:scale-110">
-                <svg xmlns="http://www.w3.org/2000/svg" width="45%" height="45%" viewBox="0 0 256 256"><path fill="#840090" d="M20 0h216c11.046 0 20 8.954 20 20v216c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20V20C0 8.954 8.954 0 20 0" /><path fill={theme === "dark" ? "#020617" : "#94a3b8" } d="M150.518 200.475v27.62q6.738 3.453 15.938 5.179T185.849 235q9.934 0 18.874-1.899t15.678-6.257q6.738-4.359 10.669-11.394q3.93-7.033 3.93-17.391q0-7.51-2.246-13.163a30.8 30.8 0 0 0-6.479-10.055q-4.232-4.402-10.149-7.898t-13.347-6.602q-5.442-2.245-9.761-4.359t-7.342-4.316q-3.024-2.2-4.665-4.661t-1.641-5.567q0-2.848 1.468-5.135q1.469-2.288 4.147-3.927t6.565-2.547q3.887-.906 8.638-.906q3.456 0 7.299.518q3.844.517 7.732 1.597a54 54 0 0 1 7.558 2.719a41.7 41.7 0 0 1 6.781 3.797v-25.807q-6.306-2.417-13.778-3.582T198.633 107q-9.847 0-18.658 2.115q-8.811 2.114-15.506 6.602q-6.694 4.49-10.582 11.437Q150 134.102 150 143.769q0 12.342 7.127 21.06t21.638 14.759a292 292 0 0 1 10.625 4.575q4.924 2.244 8.509 4.66t5.658 5.265t2.073 6.474a9.9 9.9 0 0 1-1.296 4.963q-1.295 2.287-3.93 3.97t-6.565 2.632t-9.2.95q-8.983 0-17.794-3.151t-16.327-9.451m-46.036-68.733H140V109H41v22.742h35.345V233h28.137z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45%" height="45%" viewBox="0 0 256 256"><path fill="#840090" d="M20 0h216c11.046 0 20 8.954 20 20v216c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20V20C0 8.954 8.954 0 20 0" /><path fill={theme === "dark" ? "#020617" : "#94a3b8"} d="M150.518 200.475v27.62q6.738 3.453 15.938 5.179T185.849 235q9.934 0 18.874-1.899t15.678-6.257q6.738-4.359 10.669-11.394q3.93-7.033 3.93-17.391q0-7.51-2.246-13.163a30.8 30.8 0 0 0-6.479-10.055q-4.232-4.402-10.149-7.898t-13.347-6.602q-5.442-2.245-9.761-4.359t-7.342-4.316q-3.024-2.2-4.665-4.661t-1.641-5.567q0-2.848 1.468-5.135q1.469-2.288 4.147-3.927t6.565-2.547q3.887-.906 8.638-.906q3.456 0 7.299.518q3.844.517 7.732 1.597a54 54 0 0 1 7.558 2.719a41.7 41.7 0 0 1 6.781 3.797v-25.807q-6.306-2.417-13.778-3.582T198.633 107q-9.847 0-18.658 2.115q-8.811 2.114-15.506 6.602q-6.694 4.49-10.582 11.437Q150 134.102 150 143.769q0 12.342 7.127 21.06t21.638 14.759a292 292 0 0 1 10.625 4.575q4.924 2.244 8.509 4.66t5.658 5.265t2.073 6.474a9.9 9.9 0 0 1-1.296 4.963q-1.295 2.287-3.93 3.97t-6.565 2.632t-9.2.95q-8.983 0-17.794-3.151t-16.327-9.451m-46.036-68.733H140V109H41v22.742h35.345V233h28.137z" /></svg>
                 TypeScript
               </div>
               <div className="react w-full h-32 sm:h-full flex flex-col items-center justify-end font-medium hover:scale-110">
@@ -171,10 +218,15 @@ export default function Home() {
         <div id="contato">
           <div className="mx-auto max-w-screen-lg">
             <div className={`rounded-3xl p-5 ${theme === "dark" ? "bg-blue-950" : "bg-gray-300"}`}>
-
-              <div className="text-2xl text-center">Contato</div>
+              <div className="flex justify-center">
+                <Title
+                  fontStyle="font-medium" italic="italic"
+                  textSize="text-2xl" textColor="primary"
+                  label="CONTATO"
+                />
+              </div>
               <div className="w-full text-center text-xl ">Construa seu espaço digital com nossos sites personalizados</div>
-              <div className="flex flex-col sm:flex-row justify-start w-full">
+              <div className="flex flex-col items-center w-full">
                 <div className="">
                   <RedesSociais inName={true} position="center" display="grid" />
                 </div>

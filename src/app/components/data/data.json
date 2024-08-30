@@ -9,6 +9,28 @@
             "text3": "Confie seu projeto a um profissional e veja a mágica acontecer!"
         }
     ],
+    "menu": [
+        {
+            "nameLink": "Início",
+            "srcLink": "/"
+        },
+        {
+            "nameLink": "Serviços",
+            "srcLink": "#serviços"
+        },
+        {
+            "nameLink": "Portfólio",
+            "srcLink": "#portfolio"
+        },
+        {
+            "nameLink": "Habilidades",
+            "srcLink": "#habilidades"
+        },
+        {
+            "nameLink": "Contato",
+            "srcLink": "#contato"
+        }
+    ],
     "services": [
         {
             "serviceName": "Criação de Site",
@@ -35,53 +57,45 @@
             "src": "/images/serviços/nuvem.png"
         }
     ],
-    "slide": [
+    "contato": [
         {
-            "alt": "GitHub",
-            "src": "/images/githubRoxo.png"
+            "nome": "Linkein",
+            "nickName": "Kauan Moreira",
+            "link": "https://www.linkedin.com/in/kauan-moreira-a5449426a/",
+            "image": "/images/linkedin.png"
         },
         {
-            "alt": "Instagram",
-            "src": "/images/instagramRoxo.png"
+            "nome": "Git Hub",
+            "nickName": "@kauanmoreiradev_",
+            "link": "https://github.com/KauanMoreiraDev",
+            "image": "/images/github.png"
         },
         {
-            "alt": "Linkedin",
-            "src": "/images/linkedinRoxo.png"
+            "nome": "Instagram",
+            "nickName": "@kauannmoreira_",
+            "link": "https://instagram.com/kauannmoreira_",
+            "image": "/images/instagram.png"
         },
         {
-            "alt": "Rato, mouse",
-            "src": "/images/rato.png"
-        },
-        {
-            "alt": "GitHub",
-            "src": "/images/githubRoxo.png"
-        },
-        {
-            "alt": "Instagram",
-            "src": "/images/linkedinRoxo.png"
+            "nome": "Email",
+            "nickName": "kauanmoreira457@gmail.com",
+            "link": "https://mail.google.com/mail/u/0/?fs=1&to=kauanmoreira457@gmail.com&tf=cm",
+            "image": "/images/o-email.png"
         }
     ],
-    
-    "menu": [
+    "eezycare": [
         {
-            "nameLink": "Início",
-            "srcLink": "/"
-        },
-        {
-            "nameLink": "Serviços",
-            "srcLink": "#serviços"
-        },
-        {
-            "nameLink": "Portfólio",
-            "srcLink": "#portfolio"
-        },
-        {
-            "nameLink": "Habilidades",
-            "srcLink": "#habilidades"
-        },
-        {
-            "nameLink": "Contato",
-            "srcLink": "#contato"
+            "title": "Lading Page Eezycare",
+            "label": "Desenvolvemos este projeto para uma empresa de psicologia e bem-estar em Leme-SP, focada em promover a saúde mental e o equilíbrio emocional. O site foi projetado para destacar os serviços oferecidos e a carteira de profissionais, com um design acolhedor e funcional, que reflete a dedicação dos profissionais ao bem-estar dos clientes.",
+            "link": "/images/slider/eezycareGrandePortfolio.png",
+            "image": "/images/slider/eezycarePortfolio.png"
+        }
+    ],
+    "hotel" : [{
+            "title": "Site Hotel Marina do Lago",
+            "label": "Desenvolvemos este projeto para o Hotel Marina do Lago em Santa Cruz da Conceição-SP, focado em destacar o conforto, as belezas naturais ao redor do hotel e as atividades de lazer oferecidas. O site foi projetado para refletir a tranquilidade, hospitalidade e as experiências únicas que o hotel proporciona.",
+            "link": "https://develoaperhotel.netlify.app",
+            "image": "/images/slider/hotelv3Portfolio.png"
         }
     ]
 }

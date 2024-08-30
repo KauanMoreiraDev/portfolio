@@ -8,7 +8,6 @@ export default function useSlider( initialIndex = 0, autoPlay = false, intervalT
     const images = [
         {src: "/images/slider/eezycarePortfolio.png"},
         {src: "/images/slider/hotelv3Portfolio.png"},
-        {src: "/images/slider/eezycarePortfolio.png"}
     ]
 
     const numberImagens = images
