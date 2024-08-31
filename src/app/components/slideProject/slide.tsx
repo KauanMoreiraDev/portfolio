@@ -117,8 +117,10 @@ export default function SlideProjects({ position, whatProject }: ProjectProps) {
                                 <div className="fixed inset-0 z-30 flex justify-center items-center">
                                     <div className="absolute inset-0 backdrop-blur-md"></div>
                                     <div className="relative z-40">
-                                    <button onClick={modal} className="flex flex-row justify-end w-full p-1 pr-0"><X className="active:animate-spin" /></button>
-                                        <iframe src={item.link} width={1024} height={400} loading="lazy" className="bg-white" />
+                                        <button onClick={modal} className="flex flex-row justify-end w-full p-1 pr-0"><X className="active:animate-spin" /></button>
+                                        <div className="max-w-screen-lg h-[70vh] overflow-y-scroll">
+                                            <iframe src={item.link} width={"full"} height={1000} loading="lazy" className="bg-white" />
+                                        </div>
                                     </div>
                                 </div>
                             )}
