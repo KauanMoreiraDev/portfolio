@@ -8,24 +8,20 @@ import { X } from "lucide-react";
 
 interface ProjectProps {
     position?: boolean;
-    whatProject?: "eezycare" | "hotel";
+    whatProject?: "eezycare" | "hotel" | "barbearia";
 }
 
-const { eezycare, hotel } = Data
+const { eezycare, hotel, barbearia } = Data
 
 export default function SlideProjects({ position, whatProject }: ProjectProps) {
 
-    const projeto = whatProject === "eezycare" ? eezycare : hotel
+    const projeto = whatProject === "eezycare" ? eezycare : whatProject === "hotel" ? hotel : barbearia;
 
     const { theme, setTheme } = useTheme();
 
     const toggleTheme = () => {
         setTheme(theme === "dark" ? "light" : "dark");
     };
-
-    const acessProjectComplet = () => {
-
-    }
 
     const fromHabilidades = () => {
         window.location.href = ("#habilidades")
@@ -73,13 +69,19 @@ export default function SlideProjects({ position, whatProject }: ProjectProps) {
                             </div>
                             {open && (
 
-                                <div className="fixed inset-0 z-30 flex justify-center items-center">
+                                <div className="fixed inset-0 z-30 flex flex-col justify-center items-center h-screen">
                                     <div className="absolute inset-0 backdrop-blur-md"></div>
                                     <div className="relative z-40">
                                         <button onClick={modal} className="flex flex-row justify-end w-full p-1 pr-0"><X className="active:animate-spin" /></button>
-                                        <div className="h-[70vh] overflow-y-scroll">
-                                            <Image alt="" src={item.link} width={1024} height={1000} loading="lazy" className="bg-white" />
-                                        </div>
+                                        {item.link.endsWith('.png') ?
+                                            <div className="h-[80vh] overflow-y-scroll">
+                                                <Image alt="" src={item.link} width={1024} height={1000} loading="lazy" className="bg-white" />
+                                            </div>
+                                            :
+                                            <div className="h-[80vh] w-[95vw] overflow-y-hidden">
+                                                <iframe src={item.link} width={1024} height={1000} loading="lazy" className="bg-white w-full" />
+                                            </div>
+                                        }
                                     </div>
                                 </div>
                             )}
@@ -89,7 +91,7 @@ export default function SlideProjects({ position, whatProject }: ProjectProps) {
 
                         <div className="flex flex-col sm:flex-row">
                             <div className="bg-slate-300 w-full h-full rounded-3xl block sm:hidden">
-                                <Image src={item.image} alt="" width={500} height={500} className="w-full h-full rounded-3xl" ></Image>
+                                <Image src={item.image} alt="" width={500} height={500} className="w-full h-full rounded-3xl" />
                             </div>
                             <div className="flex flex-col w-full sm:w-1/2 h-full p-3">
                                 <div className="w-full h-1/6 text-xl text-primary py-2">{item.title}</div>
@@ -115,13 +117,19 @@ export default function SlideProjects({ position, whatProject }: ProjectProps) {
                             </div>
 
                             {open && (
-                                <div className="fixed inset-0 z-30 flex justify-center items-center">
+                                <div className="fixed inset-0 z-30 flex flex-col justify-center items-center h-screen">
                                     <div className="absolute inset-0 backdrop-blur-md"></div>
                                     <div className="relative z-40">
                                         <button onClick={modal} className="flex flex-row justify-end w-full p-1 pr-0"><X className="active:animate-spin" /></button>
-                                        <div className="h-[70vh] w-[90vw]">
-                                            <iframe src={item.link} width={1024} height={1000} loading="lazy" className="bg-white w-full" />
-                                        </div>
+                                        {item.link.endsWith('.png') ?
+                                            <div className="h-[80vh] overflow-y-scroll">
+                                                <Image alt="" src={item.link} width={1024} height={1000} loading="lazy" className="bg-white" />
+                                            </div>
+                                            :
+                                            <div className="h-[80vh] w-[95vw] overflow-y-hidden">
+                                                <iframe src={item.link} width={1024} height={1000} loading="lazy" className="bg-white w-full" />
+                                            </div>
+                                        }
                                     </div>
                                 </div>
                             )}

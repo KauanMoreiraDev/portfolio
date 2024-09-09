@@ -153,6 +153,7 @@ export default function Home() {
 
             <SlideProjects position={false} whatProject="hotel" />
 
+            <SlideProjects position={true} whatProject="barbearia" />
 
 
           </div>

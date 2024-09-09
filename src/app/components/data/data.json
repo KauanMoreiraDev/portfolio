@@ -97,5 +97,12 @@
             "link": "https://develoaperhotel.netlify.app",
             "image": "/images/slider/hotelv3Portfolio.png"
         }
+    ],
+    "barbearia" : [{
+            "title": "Lading Page Barbearia",
+            "label": "Desenvolvemos o site da Barbearia Mr. Roots em Leme-SP, destacando o estilo autêntico e serviços de alta qualidade. O design reflete a tradição e modernidade da barbearia, com integração à API do grupo Meta para exibir imagens específicas do Instagram, conectando marca e clientes.",
+            "link": "https://develoaperbarber.netlify.app",
+            "image": "/images/slider/barbeariaPortfolio.png"
+        }
     ]
 }
