@@ -88,7 +88,9 @@ export default function SlideProjects({ position, whatProject }: ProjectProps) {
                         :
 
                         <div className="flex flex-col sm:flex-row">
-
+                            <div className="bg-slate-300 w-full h-full rounded-3xl block sm:hidden">
+                                <Image src={item.image} alt="" width={500} height={500} className="w-full h-full rounded-3xl" ></Image>
+                            </div>
                             <div className="flex flex-col w-full sm:w-1/2 h-full p-3">
                                 <div className="w-full h-1/6 text-xl text-primary py-2">{item.title}</div>
                                 {/* label com apenas 276 caracteres, nada mais */}
@@ -113,19 +115,18 @@ export default function SlideProjects({ position, whatProject }: ProjectProps) {
                             </div>
 
                             {open && (
-
                                 <div className="fixed inset-0 z-30 flex justify-center items-center">
                                     <div className="absolute inset-0 backdrop-blur-md"></div>
                                     <div className="relative z-40">
                                         <button onClick={modal} className="flex flex-row justify-end w-full p-1 pr-0"><X className="active:animate-spin" /></button>
-                                        <div className="max-w-screen-lg h-[70vh] overflow-y-scroll">
-                                            <iframe src={item.link} width={"full"} height={1000} loading="lazy" className="bg-white" />
+                                        <div className="h-[70vh] w-[90vw]">
+                                            <iframe src={item.link} width={1024} height={1000} loading="lazy" className="bg-white w-full" />
                                         </div>
                                     </div>
                                 </div>
                             )}
 
-                            <div className="bg-slate-300 w-full h-full rounded-3xl">
+                            <div className="bg-slate-300 w-full h-full rounded-3xl hidden sm:block">
                                 <Image src={item.image} alt="" width={500} height={500} className="w-full h-full rounded-3xl" ></Image>
                             </div>
                         </div>

@@ -37,40 +37,33 @@ export default function Home() {
     window.location.href = (menu[4].srcLink);
   };
 
-  // const elements = document.querySelectorAll('.ScrollFade');
 
-  // const myObserver = new IntersectionObserver((inf) => {
+  const elementsRef = useRef<NodeListOf<Element> | null>(null);
 
-  //   inf.forEach((visible) => {
-  //     visible.isIntersecting === true ? visible.target.classList.add('opacity-100') : visible.target.classList.remove('opacity-100')
-  //   })
-  // });
+  useEffect(() => {
+    elementsRef.current = document.querySelectorAll(".ScrollFade");
 
-  // elements.forEach((elements) => myObserver.observe(elements))
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "transition-opacity", "duration-1000");
+            entry.target.classList.remove("opacity-0");
+          } else {
+            entry.target.classList.add("opacity-0");
+            entry.target.classList.remove("opacity-100");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
-  // const [visible, setVisible] = useState(false);
-  // const elementRef = useRef(null);
+    elementsRef.current?.forEach((element) => observer.observe(element));
 
-  // useEffect(() => {
-
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       const [entry] = entries;
-  //       entry.isIntersecting ? setVisible(true) : setVisible(false)
-  //       console.log(entry)
-  //     },
-  //     {
-  //       threshold: 0.1, // Altere o valor de acordo com a porcentagem de visibilidade necessária
-  //     }
-  //   );
-
-  //   elementRef.current ? observer.observe(elementRef.current) : "";
-
-  //   return() => {
-  //     elementRef.current ? observer.unobserve(elementRef.current) : "";
-  //   }
-  //  
-  //}, []);
+    return () => {
+      elementsRef.current?.forEach((element) => observer.unobserve(element));
+    };
+  }, []);
 
   return (
     <main className={`font-Oswald font-light ${theme === "dark" ? "bg-slate-950 text-white" : "bg-slate-400 text-black"}`}>
@@ -129,7 +122,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="serviços">
+        <div id="serviços" className="ScrollFade">
           <div className="mx-auto max-w-screen-lg h-full py-16">
             <div className="flex justify-center">
               <Title
@@ -152,7 +145,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="portfolio">
+        <div id="portfolio" className="ScrollFade">
           <div className="mx-auto max-w-screen-lg h-full py-16">
 
             <SlideProjects position={true} whatProject="eezycare" />
@@ -165,7 +158,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="habilidades">
+        <div id="habilidades" className="ScrollFade">
           <div className="mx-auto max-w-screen-lg py-16">
 
             <div className="flex justify-center">
@@ -215,7 +208,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="contato">
+        <div id="contato" className="ScrollFade">
           <div className="mx-auto max-w-screen-lg">
             <div className={`rounded-3xl p-5 ${theme === "dark" ? "bg-blue-950" : "bg-gray-300"}`}>
               <div className="flex justify-center">
