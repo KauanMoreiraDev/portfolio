@@ -148,12 +148,12 @@ export default function Home() {
         <div id="portfolio" className="ScrollFade">
           <div className="mx-auto max-w-screen-lg h-full py-16">
 
-            <SlideProjects position={true} whatProject="eezycare" />
+            <SlideProjects isFigma={true} position={true} whatProject="eezycare" />
 
 
-            <SlideProjects position={false} whatProject="hotel" />
+            <SlideProjects isFigma={false} position={false} whatProject="hotel" />
 
-            <SlideProjects position={true} whatProject="barbearia" />
+            <SlideProjects isFigma={false} position={true} whatProject="barbearia" />
 
 
           </div>
